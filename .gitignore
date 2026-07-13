@@ -1,0 +1,4 @@
+# Keep the original, full-resolution uploads local. The optimized copies used
+# by the live site are committed from assets/img/web/.
+assets/img/*.jpg
+
