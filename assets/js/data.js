@@ -6,42 +6,27 @@
    ========================================================================== */
 
 const IB_STORAGE = {
-  products: 'iceberg_products_v1',
-  properties: 'iceberg_properties_v1',
+  products: 'iceberg_products_v2',
+  properties: 'iceberg_properties_v2',
   auth: 'iceberg_admin_auth'
 };
 
 /* ---------- seed: products (from the company profile) ---------- */
 const IB_SEED_PRODUCTS = [
-  { id:'p1', category:'Protecção Individual', name:'Máscara Cirúrgica Descartável', img:'assets/img/products/mascara-descartavel.jpg', desc:'Máscara de 3 camadas, uso único, elástico auricular macio. Vendida em caixas.' },
-  { id:'p2', category:'Protecção Individual', name:'Máscara QSA 2000 FFP1/FFP2', img:'assets/img/products/mascara-cirurgica.jpg', desc:'Máscara moldada de alta filtração, indicada para ambientes industriais e de saúde.' },
-  { id:'p3', category:'Protecção Individual', name:'Luvas Descartáveis em Nitrilo', img:'assets/img/products/luvas-descartaveis.png', desc:'Luvas sem pó, resistentes, disponíveis em vários tamanhos, caixa com 100 unidades.' },
-  { id:'p4', category:'Protecção Individual', name:'Óculos de Visão Ampla', img:'assets/img/products/oculos-visao-ampla.jpg', desc:'Óculos de protecção panorâmicos, antiembaciamento, banda ajustável.' },
-  { id:'p5', category:'Protecção Individual', name:'Capa-Tudo Promax 1000 Descartável', img:'assets/img/products/capa-tudo-promax.jpg', desc:'Fato de protecção integral descartável, costuras seladas, ideal para ambientes de risco biológico.' },
-  { id:'p6', category:'Protecção Individual', name:'Capa-Tudo Não Tecido com Capuz', img:'assets/img/products/capa-tudo-nao-tecido.jpg', desc:'Vestuário de protecção leve e respirável, com capuz integrado.' },
-  { id:'p7', category:'Higienização', name:'Dispensador Automático de Sabão', img:'assets/img/products/dispensador-automatico.jpg', desc:'Dispensador touch-free de 700ml, sensor automático, ideal para espaços públicos.' },
-  { id:'p8', category:'Equipamento Médico', name:'Termómetro Digital Infravermelho', img:'assets/img/products/termometro-digital.webp', desc:'Medição rápida e sem contacto da temperatura corporal, leitura digital.' },
-  { id:'p9', category:'Equipamento Médico', name:'Termómetro de Parede Anti-Contacto', img:'assets/img/products/termometro-anti-contacto.jpg', desc:'Solução fixa para entradas de edifícios, medição automática ao aproximar a mão.' },
-  { id:'p10', category:'Equipamento Médico', name:'Maca Hospitalar com Rodas', img:'assets/img/products/maca-hospitalar-rodas.jpg', desc:'Maca ajustável em altura, grades laterais rebatíveis, suporte de soro incluído.' },
-  { id:'p11', category:'Equipamento Médico', name:'Maca Padiola de Transporte', img:'assets/img/products/maca-padiola.webp', desc:'Maca de transporte com rodas, estrutura reforçada, encosto reclinável.' },
-  { id:'p12', category:'Equipamento Médico', name:'Kit Portátil de Primeiros Socorros', img:'assets/img/products/kit-primeiros-socorros.jpg', desc:'Mala completa de primeiros socorros para uso em campo, escritório ou viatura.' },
+  { id:'p1', category:'Galeria de Produtos', name:'Máscaras Cirúrgicas', img:'assets/img/products/mascara-descartavel.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p2', category:'Galeria de Produtos', name:'Dispensador Automático', img:'assets/img/products/dispensador-automatico.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p3', category:'Galeria de Produtos', name:'Viseiras Plásticas Azuis', img:'assets/img/no-image.png', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p4', category:'Galeria de Produtos', name:'Óculos de Visão Ampla', img:'assets/img/products/oculos-visao-ampla.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p5', category:'Galeria de Produtos', name:'Termómetro Digital', img:'assets/img/products/termometro-digital.webp', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p6', category:'Galeria de Produtos', name:'Termómetro Anti-Contacto', img:'assets/img/products/termometro-anti-contacto.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p7', category:'Galeria de Produtos', name:'Capa-Tudo Promax 1000 Descartável', img:'assets/img/products/capa-tudo-promax.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p8', category:'Galeria de Produtos', name:'Capa-Tudo Não Tecido com Capuz', img:'assets/img/products/capa-tudo-nao-tecido.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p9', category:'Galeria de Produtos', name:'QSA 2000 Series Moulded FFP1 Mask', img:'assets/img/products/mascara-cirurgica.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
+  { id:'p10', category:'Galeria de Produtos', name:'QSA 2000 Series FFP2 Mask - 2020', img:'assets/img/products/mascara-cirurgica.jpg', desc:'Produto apresentado na galeria do Perfil da Empresa.' },
 ];
 
 /* ---------- seed: real-estate properties ---------- */
-const IB_SEED_PROPERTIES = [
-  { id:'r1', title:'Vivenda T4 com Quintal', tipo:'Vivenda', estado:'Venda', preco:'8.500.000', moeda:'MT', localizacao:'Bairro Central, Nampula', quartos:4, wc:3, area:320, destaque:true, img:'assets/img/web/2234842_H_18.jpg',
-    desc:'Vivenda espaçosa em zona residencial tranquila, com quintal amplo, garagem para duas viaturas e acabamentos modernos. Excelente para famílias que procuram conforto e segurança.' },
-  { id:'r2', title:'Apartamento T2 Mobilado', tipo:'Apartamento', estado:'Arrendamento', preco:'35.000', moeda:'MT/mês', localizacao:'Muhala, Nampula', quartos:2, wc:1, area:85, destaque:true, img:'assets/img/web/images (2).jpg',
-    desc:'Apartamento moderno e totalmente mobilado, próximo de escolas e centros comerciais, ideal para profissionais e pequenas famílias.' },
-  { id:'r3', title:'Armazém Logístico', tipo:'Armazém', estado:'Arrendamento', preco:'120.000', moeda:'MT/mês', localizacao:'Zona Industrial, Nampula', quartos:0, wc:2, area:1200, destaque:true, img:'assets/img/web/photorealistic-scene-with-warehouse-logistics-operations (1).jpg',
-    desc:'Amplo espaço de armazenagem com acesso facilitado para camiões, pé direito alto e escritório administrativo anexo.' },
-  { id:'r4', title:'Terreno para Construção', tipo:'Terreno', estado:'Venda', preco:'2.200.000', moeda:'MT', localizacao:'Marrere, Nampula', quartos:0, wc:0, area:900, destaque:false, img:'assets/img/web/Resize1-3.jpg',
-    desc:'Terreno plano com documentação regularizada, localizado em zona de expansão urbana, pronto para construção.' },
-  { id:'r5', title:'Escritório Corporativo', tipo:'Escritório', estado:'Arrendamento', preco:'60.000', moeda:'MT/mês', localizacao:'Bairro Central, Nampula', quartos:0, wc:1, area:150, destaque:false, img:'assets/img/web/parallax-image-marketing-page.90.jpg',
-    desc:'Espaço de escritório em edifício central, open-space adaptável, com estacionamento privativo.' },
-  { id:'r6', title:'Vivenda T3 Moderna', tipo:'Vivenda', estado:'Venda', preco:'6.100.000', moeda:'MT', localizacao:'Namicopo, Nampula', quartos:3, wc:2, area:210, destaque:false, img:'assets/img/web/GettyImages-1151832961.jpg',
-    desc:'Vivenda recente com acabamentos de qualidade, cozinha equipada e varanda ampla com vista aberta.' },
-];
+const IB_SEED_PROPERTIES = [];
 
 /* ---------- storage helpers ---------- */
 function ibLoad(key, seed){
