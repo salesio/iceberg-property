@@ -351,7 +351,14 @@ section{ padding: 5.5rem 0; }
 .ib-footer h5{ color:#fff; font-size:1rem; margin-bottom:1.1rem; }
 .ib-footer a{ color: rgba(255,255,255,.68); }
 .ib-footer a:hover{ color: var(--ib-gold); }
-.ib-footer .flogo{ height:44px; margin-bottom:1rem; }
+.ib-footer .flogo{
+  width:auto;
+  height:92px;
+  max-width:230px;
+  object-fit:contain;
+  object-position:left center;
+  margin-bottom:1rem;
+}
 .ib-footer .fbottom{ border-top:1px solid rgba(255,255,255,.12); padding: 1.3rem 0; margin-top: 3rem; font-size:.82rem; }
 .ib-admin-link{
   display:inline-flex; align-items:center; gap:.4rem; font-size:.75rem; color: rgba(255,255,255,.45) !important;
